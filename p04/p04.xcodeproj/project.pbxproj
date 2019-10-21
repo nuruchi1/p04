@@ -17,6 +17,7 @@
 		F20AA8A42354BD8D001190B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F20AA8A22354BD8D001190B8 /* LaunchScreen.storyboard */; };
 		F20AA8AF2354BD8D001190B8 /* p04Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20AA8AE2354BD8D001190B8 /* p04Tests.swift */; };
 		F20AA8BA2354BD8E001190B8 /* p04UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20AA8B92354BD8E001190B8 /* p04UITests.swift */; };
+		F2F86516235D5DEC0047B86E /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F86515235D5DEC0047B86E /* ViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		F20AA8B52354BD8E001190B8 /* p04UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = p04UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F20AA8B92354BD8E001190B8 /* p04UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p04UITests.swift; sourceTree = "<group>"; };
 		F20AA8BB2354BD8E001190B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2F86515235D5DEC0047B86E /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				F20AA8972354BD8C001190B8 /* Actions.sks */,
 				F20AA8992354BD8C001190B8 /* GameScene.swift */,
 				F20AA89B2354BD8C001190B8 /* GameViewController.swift */,
+				F2F86515235D5DEC0047B86E /* ViewController2.swift */,
 				F20AA89D2354BD8C001190B8 /* Main.storyboard */,
 				F20AA8A02354BD8D001190B8 /* Assets.xcassets */,
 				F20AA8A22354BD8D001190B8 /* LaunchScreen.storyboard */,
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F20AA89A2354BD8C001190B8 /* GameScene.swift in Sources */,
+				F2F86516235D5DEC0047B86E /* ViewController2.swift in Sources */,
 				F20AA89C2354BD8C001190B8 /* GameViewController.swift in Sources */,
 				F20AA8942354BD8C001190B8 /* AppDelegate.swift in Sources */,
 			);
