@@ -35,7 +35,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start Game"/>
                                 <connections>
-                                    <segue destination="utc-wF-PFD" kind="show" id="lTU-O9-IRB"/>
+                                    <segue destination="utc-wF-PFD" kind="show" id="yxP-DS-fOU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCo-te-ZLm">
@@ -86,10 +86,10 @@
             </objects>
             <point key="canvasLocation" x="838" y="131"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller3-->
         <scene sceneID="asU-ik-LfA">
             <objects>
-                <viewController id="utc-wF-PFD" sceneMemberID="viewController">
+                <viewController id="utc-wF-PFD" customClass="ViewController3" customModule="p04" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="52d-Mp-k0S">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,6 +105,9 @@
                                 <rect key="frame" x="22" y="40" width="42" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Pause"/>
+                                <connections>
+                                    <segue destination="krZ-Qf-rKg" kind="show" id="1O6-Xh-xhG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -116,5 +119,50 @@
             </objects>
             <point key="canvasLocation" x="1518.840579710145" y="130.58035714285714"/>
         </scene>
+        <!--View Controller4-->
+        <scene sceneID="4uW-Qw-yQW">
+            <objects>
+                <viewController id="krZ-Qf-rKg" customClass="ViewController4" customModule="p04" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r2K-NU-NVc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEH-IP-OYQ">
+                                <rect key="frame" x="180" y="225" width="55" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Resume"/>
+                                <connections>
+                                    <segue destination="utc-wF-PFD" kind="show" id="qQy-Wo-prU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pause Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tM8-M7-z5d">
+                                <rect key="frame" x="155" y="71" width="105" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3a-zd-tKR">
+                                <rect key="frame" x="155" y="329" width="72" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Quit"/>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="Qtl-Sh-XeQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Lro-Vf-dOh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vPn-6O-zku"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Or-fb-nDM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2237.68115942029" y="129.91071428571428"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qQy-Wo-prU"/>
+        <segue reference="Qtl-Sh-XeQ"/>
+    </inferredMetricsTieBreakers>
 </document>
