@@ -7,17 +7,20 @@
 //
 
 import UIKit
+import SpriteKit
+import GameplayKit
+var userScore = 0;
 
-class ViewController3: UIViewController {
+class ViewController3: UIViewController, SKPhysicsContactDelegate {
 
-    override func viewDidLoad() {
+   override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
 
-    /*
+  /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
