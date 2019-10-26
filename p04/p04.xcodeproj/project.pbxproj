@@ -58,6 +58,7 @@
 		F20AA8BB2354BD8E001190B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F25FCBA72361518100248212 /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 		F25FCBA9236151A400248212 /* ViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
+		F29E8EC52363F94A00094C24 /* FinkHeavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FinkHeavy.ttf; sourceTree = "<group>"; };
 		F2F86515235D5DEC0047B86E /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +110,7 @@
 		F20AA8922354BD8C001190B8 /* p04 */ = {
 			isa = PBXGroup;
 			children = (
+				F29E8EC52363F94A00094C24 /* FinkHeavy.ttf */,
 				F20AA8932354BD8C001190B8 /* AppDelegate.swift */,
 				F20AA8952354BD8C001190B8 /* GameScene.sks */,
 				F20AA8972354BD8C001190B8 /* Actions.sks */,

@@ -10,7 +10,23 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
-    
+    override func didMove(to view:SKView)
+    {
+        let background = SKSpriteNode(imageNamed: "mainscreenBackground")
+        background.position = CGPoint(x: self.size.width/5, y:self.size.height/5)
+        background.zPosition = 0
+        self.addChild(background)
+        
+        let titleLabel = SKLabelNode(fontNamed: "Fink Heavy")
+        titleLabel.text = "Animal Crossing"
+        titleLabel.fontSize = 200
+        titleLabel.fontColor = SKColor.black
+        titleLabel.zRotation = .pi/2
+        titleLabel.position = CGPoint(x: self.size.width * 0.50, y: self.size.height * 0.50)
+        titleLabel.zPosition = 1
+        self.addChild(titleLabel)
+    }
+  /*
     var entities = [GKEntity]()
     var graphs = [String : GKGraph]()
     
@@ -106,5 +122,5 @@ class GameScene: SKScene {
         }
         
         self.lastUpdateTime = currentTime
-    }
+    } */
 }
