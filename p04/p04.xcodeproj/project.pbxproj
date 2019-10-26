@@ -19,6 +19,7 @@
 		F20AA8BA2354BD8E001190B8 /* p04UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20AA8B92354BD8E001190B8 /* p04UITests.swift */; };
 		F25FCBA82361518100248212 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25FCBA72361518100248212 /* ViewController3.swift */; };
 		F25FCBAA236151A400248212 /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25FCBA9236151A400248212 /* ViewController4.swift */; };
+		F29E8EC62364105E00094C24 /* FinkHeavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F29E8EC52363F94A00094C24 /* FinkHeavy.ttf */; };
 		F2F86516235D5DEC0047B86E /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F86515235D5DEC0047B86E /* ViewController2.swift */; };
 /* End PBXBuildFile section */
 
@@ -118,8 +119,8 @@
 				F20AA89B2354BD8C001190B8 /* GameViewController.swift */,
 				F2F86515235D5DEC0047B86E /* ViewController2.swift */,
 				F25FCBA72361518100248212 /* ViewController3.swift */,
-				F20AA89D2354BD8C001190B8 /* Main.storyboard */,
 				F25FCBA9236151A400248212 /* ViewController4.swift */,
+				F20AA89D2354BD8C001190B8 /* Main.storyboard */,
 				F20AA8A02354BD8D001190B8 /* Assets.xcassets */,
 				F20AA8A22354BD8D001190B8 /* LaunchScreen.storyboard */,
 				F20AA8A52354BD8D001190B8 /* Info.plist */,
@@ -251,6 +252,7 @@
 			files = (
 				F20AA89F2354BD8C001190B8 /* Main.storyboard in Resources */,
 				F20AA8962354BD8C001190B8 /* GameScene.sks in Resources */,
+				F29E8EC62364105E00094C24 /* FinkHeavy.ttf in Resources */,
 				F20AA8A12354BD8D001190B8 /* Assets.xcassets in Resources */,
 				F20AA8A42354BD8D001190B8 /* LaunchScreen.storyboard in Resources */,
 				F20AA8982354BD8C001190B8 /* Actions.sks in Resources */,

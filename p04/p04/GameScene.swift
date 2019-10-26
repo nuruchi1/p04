@@ -6,10 +6,12 @@
 //  Copyright © 2019 Nathaly Uruchima. All rights reserved.
 //
 
+import Foundation
 import SpriteKit
-import GameplayKit
+
 
 class GameScene: SKScene {
+    
     override func didMove(to view:SKView)
     {
         let background = SKSpriteNode(imageNamed: "mainscreenBackground")
@@ -17,110 +19,72 @@ class GameScene: SKScene {
         background.zPosition = 0
         self.addChild(background)
         
-        let titleLabel = SKLabelNode(fontNamed: "Fink Heavy")
-        titleLabel.text = "Animal Crossing"
-        titleLabel.fontSize = 200
+        
+        let titleLabel = SKLabelNode(fontNamed: "FinkHeavy")
+        titleLabel.text = "Animal Crossing:"
+        titleLabel.fontSize = 50
         titleLabel.fontColor = SKColor.black
-        titleLabel.zRotation = .pi/2
-        titleLabel.position = CGPoint(x: self.size.width * 0.50, y: self.size.height * 0.50)
-        titleLabel.zPosition = 1
+        titleLabel.zRotation = 0
+        titleLabel.position = CGPoint(x: 0, y: 100)
+        titleLabel.zPosition = 0
         self.addChild(titleLabel)
-    }
-  /*
-    var entities = [GKEntity]()
-    var graphs = [String : GKGraph]()
-    
-    private var lastUpdateTime : TimeInterval = 0
-    private var label : SKLabelNode?
-    private var spinnyNode : SKShapeNode?
-    
-    override func sceneDidLoad() {
+        
+        let titleLabel2 = SKLabelNode(fontNamed: "FinkHeavy")
+        titleLabel2.text = "Isabelle's Duty"
+        titleLabel2.fontSize = 40
+        titleLabel2.fontColor = SKColor.black
+        titleLabel2.zRotation = 0
+        titleLabel2.position = CGPoint(x: 0, y: 50)
+        titleLabel2.zPosition = 0
+        self.addChild(titleLabel2)
+        
+        let startGameLabel = SKLabelNode(fontNamed: "FinkHeavy")
+        startGameLabel.text = "Start"
+        startGameLabel.fontSize = 30
+        startGameLabel.fontColor = SKColor.black
+        startGameLabel.zRotation = 0
+        startGameLabel.position = CGPoint(x: 0, y: -20)
+        startGameLabel.zPosition = 0
+        startGameLabel.name = "startButton"
+        self.addChild(startGameLabel)
+        
+        let h2pGameLabel = SKLabelNode(fontNamed: "FinkHeavy")
+        h2pGameLabel.text = "How to Play"
+        h2pGameLabel.fontSize = 30
+        h2pGameLabel.fontColor = SKColor.black
+        h2pGameLabel.zRotation = 0
+        h2pGameLabel.position = CGPoint(x: 0, y: -60)
+        h2pGameLabel.zPosition = 0
+        h2pGameLabel.name = "h2pButton"
+        self.addChild(h2pGameLabel)
+        
+        let exitGameLabel = SKLabelNode(fontNamed: "FinkHeavy")
+        exitGameLabel.text = "Exit"
+        exitGameLabel.fontSize = 30
+        exitGameLabel.fontColor = SKColor.black
+        exitGameLabel.zRotation = 0
+        exitGameLabel.position = CGPoint(x: 0, y: -100)
+        exitGameLabel.zPosition = 0
+        exitGameLabel.name = "exitButton"
+        self.addChild(exitGameLabel)
+        
 
-        self.lastUpdateTime = 0
-        
-        // Get label node from scene and store it for use later
-        self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
-        if let label = self.label {
-            label.alpha = 0.0
-            label.run(SKAction.fadeIn(withDuration: 2.0))
-        }
-        
-        // Create shape node to use during mouse interaction
-        let w = (self.size.width + self.size.height) * 0.05
-        self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
-        
-        if let spinnyNode = self.spinnyNode {
-            spinnyNode.lineWidth = 2.5
+    }
+  
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
+        for touch: AnyObject in touches{
+            let pointOfTouch = touch.location(in: self)
+            let nodeTapped = atPoint(pointOfTouch)
+            if nodeTapped.name == "startButton"{
+                let sceneToMoveTo = ViewController3(size: self.size)
+                sceneToMoveTo.scaleMode = self.scaleMode
+                let myTransition = SKTransition.fade(withDuration: 0.5)
+                self.view!.presentScene(sceneToMoveTo, transition: myTransition)
+            }
             
-            spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 1)))
-            spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
-                                              SKAction.fadeOut(withDuration: 0.5),
-                                              SKAction.removeFromParent()]))
+             
         }
     }
-    
-    
-    func touchDown(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.green
-            self.addChild(n)
-        }
-    }
-    
-    func touchMoved(toPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.blue
-            self.addChild(n)
-        }
-    }
-    
-    func touchUp(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.red
-            self.addChild(n)
-        }
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let label = self.label {
-            label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
-        }
-        
-        for t in touches { self.touchDown(atPoint: t.location(in: self)) }
-    }
-    
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchMoved(toPoint: t.location(in: self)) }
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
-    }
-    
-    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
-    }
-    
-    
-    override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
-        
-        // Initialize _lastUpdateTime if it has not already been
-        if (self.lastUpdateTime == 0) {
-            self.lastUpdateTime = currentTime
-        }
-        
-        // Calculate time since last update
-        let dt = currentTime - self.lastUpdateTime
-        
-        // Update entities
-        for entity in self.entities {
-            entity.update(deltaTime: dt)
-        }
-        
-        self.lastUpdateTime = currentTime
-    } */
+
 }

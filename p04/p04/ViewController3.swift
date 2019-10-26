@@ -6,18 +6,18 @@
 //  Copyright © 2019 Nathaly Uruchima. All rights reserved.
 //
 
-import UIKit
+
 import SpriteKit
 import GameplayKit
 var userScore = 0;
 
-class ViewController3: UIViewController, SKPhysicsContactDelegate {
+class ViewController3: SKScene, SKPhysicsContactDelegate {
 
-   override func viewDidLoad() {
-        super.viewDidLoad()
+  // override func viewDidLoad() {
+  //      super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
+    
     
 
   /*
