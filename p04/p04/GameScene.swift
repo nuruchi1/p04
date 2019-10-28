@@ -11,7 +11,6 @@ import SpriteKit
 
 
 class GameScene: SKScene {
-    
     override func didMove(to view:SKView)
     {
         let background = SKSpriteNode(imageNamed: "mainscreenBackground")
@@ -26,7 +25,7 @@ class GameScene: SKScene {
         titleLabel.fontColor = SKColor.black
         titleLabel.zRotation = 0
         titleLabel.position = CGPoint(x: 0, y: 100)
-        titleLabel.zPosition = 0
+        titleLabel.zPosition = 1
         self.addChild(titleLabel)
         
         let titleLabel2 = SKLabelNode(fontNamed: "FinkHeavy")
@@ -35,7 +34,7 @@ class GameScene: SKScene {
         titleLabel2.fontColor = SKColor.black
         titleLabel2.zRotation = 0
         titleLabel2.position = CGPoint(x: 0, y: 50)
-        titleLabel2.zPosition = 0
+        titleLabel2.zPosition = 1
         self.addChild(titleLabel2)
         
         let startGameLabel = SKLabelNode(fontNamed: "FinkHeavy")
@@ -44,7 +43,7 @@ class GameScene: SKScene {
         startGameLabel.fontColor = SKColor.black
         startGameLabel.zRotation = 0
         startGameLabel.position = CGPoint(x: 0, y: -20)
-        startGameLabel.zPosition = 0
+        startGameLabel.zPosition = 1
         startGameLabel.name = "startButton"
         self.addChild(startGameLabel)
         
@@ -54,7 +53,7 @@ class GameScene: SKScene {
         h2pGameLabel.fontColor = SKColor.black
         h2pGameLabel.zRotation = 0
         h2pGameLabel.position = CGPoint(x: 0, y: -60)
-        h2pGameLabel.zPosition = 0
+        h2pGameLabel.zPosition = 1
         h2pGameLabel.name = "h2pButton"
         self.addChild(h2pGameLabel)
         
@@ -64,7 +63,7 @@ class GameScene: SKScene {
         exitGameLabel.fontColor = SKColor.black
         exitGameLabel.zRotation = 0
         exitGameLabel.position = CGPoint(x: 0, y: -100)
-        exitGameLabel.zPosition = 0
+        exitGameLabel.zPosition = 1
         exitGameLabel.name = "exitButton"
         self.addChild(exitGameLabel)
         
@@ -73,14 +72,24 @@ class GameScene: SKScene {
   
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
     {
+        
         for touch: AnyObject in touches{
             let pointOfTouch = touch.location(in: self)
             let nodeTapped = atPoint(pointOfTouch)
+            //var sceneToMoveTo = 0
             if nodeTapped.name == "startButton"{
-                let sceneToMoveTo = ViewController3(size: self.size)
+               let sceneToMoveTo = ViewController3(size: self.size)
                 sceneToMoveTo.scaleMode = self.scaleMode
                 let myTransition = SKTransition.fade(withDuration: 0.5)
                 self.view!.presentScene(sceneToMoveTo, transition: myTransition)
+            }
+            
+            else if nodeTapped.name == "h2pButton"
+            {
+                let sceneToMoveToo = ViewController2(size: self.size)
+                sceneToMoveToo.scaleMode = self.scaleMode
+                let myTransition = SKTransition.fade(withDuration: 0.5)
+                self.view!.presentScene(sceneToMoveToo, transition: myTransition)
             }
             
              

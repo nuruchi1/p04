@@ -7,15 +7,11 @@
 //
 
 import UIKit
+import SpriteKit
+import GameKit
+class ViewController2: SKScene, SKPhysicsContactDelegate {
 
-class ViewController2: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
-    }
+  
     
 
     /*
