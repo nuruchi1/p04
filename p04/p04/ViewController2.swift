@@ -27,7 +27,7 @@ class ViewController2: SKScene {
             titleLabel.position = CGPoint(x: 50, y: 100)
             titleLabel.zPosition = 2
             self.addChild(titleLabel)
-    /*
+    
         let infoLabel = SKLabelNode(fontNamed: "FinkHeavy")
             infoLabel.text = "Isabelle has been taking care of the town ever since the Mayor dissapeared."
             infoLabel.fontSize = 40
@@ -54,7 +54,7 @@ class ViewController2: SKScene {
             infoLabel3.position = CGPoint(x: 0, y: 50)
             infoLabel3.zPosition = 1
             self.addChild(infoLabel3)
-*/
+
         
     }
    
